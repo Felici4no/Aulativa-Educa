@@ -1,0 +1,228 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 10%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header h1 a{
+    color: white;
+    text-decoration: none;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+header #score {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #ffdd57; /* Cor destaque para o score */
+}
+
+header img {
+    width: 25px;
+}
+
+/* Conteúdo Principal */
+main {
+    flex: 1;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+/* Estilo para a página de matérias */
+#materias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn_materias {
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn_materias img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.btn_materias:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn_materias:hover:not(:disabled) {
+    transform: translateY(-5px);
+    background-color: #f0f8ff;
+}
+
+/* Estilo para a página de atividade */
+#atividade {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+#questao {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#respostas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#respostas button {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#respostas button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#respostas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#respostas button {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#respostas button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#respostas button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #e0e0e0; /* Cor de fundo mais clara para parecer desabilitado */
+    color: #a0a0a0; /* Cor do texto mais clara */
+    border-color: #a0a0a0; /* Cor da borda combinando com o texto */
+}
+
+#respostas button:disabled:hover {
+    background-color: #e0e0e0; /* Mantém a cor de fundo ao passar o mouse */
+    color: #a0a0a0; /* Mantém a cor do texto */
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer h5, footer a, footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    main {
+        padding: 20px 5%;
+    }
+
+    h3, h4 {
+        font-size: 1.2em;
+    }
+
+    #atividade {
+        padding: 15px;
+    }
+
+    #materias {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap; /* Permite que os itens desçam para outra linha */
+    }
+    
+
+    #respostas button {
+        padding: 8px;
+        font-size: 1em;
+    }
+
+}

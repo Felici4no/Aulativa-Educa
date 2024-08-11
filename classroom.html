@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/estilo.css">
+    <title>Sala de Aulativa</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Sala de Aulativa</a></h1>
+        <p>Próxima Conquista: <strong>Medalha de Principiante</strong></p>
+        <p id="score">0<img src="src/assests/medalha.png" alt="medalha"> </p>
+    </header>
+    <main>
+        <h3>Nivel: <strong>1</strong></h3>
+        <h4>Atividade: <strong>1</strong></h4>
+        <br>
+        <div id="atividade">
+            <p id="questao">
+                (Questão aqui)
+            </p>
+            <div id="respostas">
+                <button id="btn_a" onclick="escolha('a')">a</button>
+                <button id="btn_b" onclick="escolha('b')">b</button>
+                <button id="btn_c" onclick="escolha('c')">c</button>
+                <button id="btn_d" onclick="escolha('d')">d</button>
+            </div>
+        </div>
+    </main>
+    
+</body>
+
+<footer>
+    <h5>
+        Todos os direitos reservados
+    </h5>
+    <a href="#">
+        &copy;Aulativa
+    </a>
+</footer>
+<script src="src/function.js"></script>
+</html>
