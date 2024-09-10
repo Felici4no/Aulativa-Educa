@@ -3,23 +3,22 @@ var atividade = 1;
 var gab = 0;
 
 //Conquista
-const conquista = [
-    "Chapéu Basico",
-    "Medalha de Principiante da Aritmética",
-    "Troféu de Somador Rápido",
-    "Distintivo de Subtração Precisa",
-    "Medalha de Multiplicador Experiente",
-    "Escudo do Divisor Mestre",
-    "Troféu de Cálculo Mental Rápido",
-    "Medalha de Expert em Operações Básicas",
-    "Distintivo de Aritmética Avançada",
-    "Escudo do Prodigio Aritmético",
-    "Troféu de Campeão da Tabuada",
-    "Medalha de Mestre das Quatro Operações",
-    "Distintivo do Desafio de Números",
-    "Medalha de Virtuoso da Multiplicação",
-    "Troféu de Genialidade Aritmética",
-    "Escudo de Herói dos Números Inteiros"
+const conquistaMultiplicacao = [
+    "Estrela do Multiplicador Rápido",
+    "Troféu do Mestre da Tabuada",
+    "Medalha de Multiplicação Instantânea",
+    "Distintivo do Prodigio da Tabuada",
+    "Escudo do Multiplicador Supremo",
+    "Troféu de Domínio da Multiplicação",
+    "Medalha de Fatoração Perfeita",
+    "Distintivo de Calculadora Humana",
+    "Escudo de Velocidade na Multiplicação",
+    "Medalha de Campeão da Multiplicação",
+    "Troféu de Estratégia de Multiplicação",
+    "Escudo de Excelência na Tabuada",
+    "Medalha de Grande Multiplicador",
+    "Distintivo de Mestre dos Produtos",
+    "Escudo de Virtuose dos Fatores"
 ];
 
 
