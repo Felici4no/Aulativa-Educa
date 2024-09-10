@@ -2,7 +2,7 @@ var nivel = 1;
 var atividade = 1;
 var gab = 0;
 
-//Conquista
+// Conquista
 const conquistaMultiplicacao = [
     "Estrela do Multiplicador Rápido",
     "Troféu do Mestre da Tabuada",
@@ -20,7 +20,6 @@ const conquistaMultiplicacao = [
     "Distintivo de Mestre dos Produtos",
     "Escudo de Virtuose dos Fatores"
 ];
-
 
 function contentsMath() {
     // Armazena um valor no localStorage
@@ -107,27 +106,24 @@ function gerarNumeroAleatorio(min, max) {
 }
 
 function escolha(resposta) {
-    
-    if (resposta == ''){ // 
-        if(atividade <= 0 ){
-            atividade = 0;
-        }else{
-            atividade--;
-        }
-        return start();
-    }
-    else if (resposta == 'a' && gab == 1 || resposta == 'b' && gab == 2 || resposta == 'c' && gab == 3 || resposta == 'd' && gab == 4) {
+    const opcoes = { 'a': 1, 'b': 2, 'c': 3, 'd': 4 };
+    if (opcoes[resposta] === gab) {
         atividade++;
-        resposta ='';
+        resposta = '';
         
         if (atividade % 10 === 0) {
-            nivel ++;  // Incrementa o nível
+            nivel++;
         }
-        classific(atividade,nivel);
+        
+        // Limita o nível ao tamanho da lista de conquistas
+        if (nivel > conquistaMultiplicacao.length - 1) {
+            nivel = conquistaMultiplicacao.length - 1;
+        }
+        
+        classific(atividade, nivel);
         return start(); // Carrega a próxima pergunta
     } else {
-        //alert('Errou! Tente novamente.');
-        
+        // Tente novamente, mas a atividade não muda
         return start();
     }
 }
@@ -138,12 +134,14 @@ document.getElementById('btn_b').addEventListener('click', function() { escolha(
 document.getElementById('btn_c').addEventListener('click', function() { escolha('c'); });
 document.getElementById('btn_d').addEventListener('click', function() { escolha('d'); });
 
-function classific(atividade,nivel){
+function classific(atividade, nivel) {
     // Pega todos os elementos <strong>
     var allStrongTags = document.querySelectorAll('p strong');
 
-    // Pega o texto do primeiro strong (primeira <p>)
-    allStrongTags[0].textContent = conquista[nivel] // "Medalha de Principiante"
-
-    allStrongTags[1].textContent = 11 * atividade; // "0"
+    // Verifica se existem elementos <strong> suficientes
+    if (allStrongTags.length >= 2) {
+        // Atualiza a conquista e o valor baseado no nível e atividade
+        allStrongTags[0].textContent = conquistaMultiplicacao[nivel];
+        allStrongTags[1].textContent = 11 * atividade;
+    }
 }
