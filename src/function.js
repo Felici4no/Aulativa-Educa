@@ -4,6 +4,7 @@ var gab = 0;
 
 //Conquista
 const conquista = [
+    "Chapéu Basico",
     "Medalha de Principiante da Aritmética",
     "Troféu de Somador Rápido",
     "Distintivo de Subtração Precisa",
@@ -60,7 +61,7 @@ function start() {
 function montaQuestao(y, x, r) {
     // Adiciona a questão no enunciado
     var questao = document.getElementById('questao');
-    questao.innerHTML = `${y} x ${x} = ?`;
+    questao.innerHTML = `${y} x ${x}`;
 
     // Escolhe onde a resposta vai ficar
     gab = gerarNumeroAleatorio(1, 4);
@@ -127,6 +128,8 @@ function escolha(resposta) {
         return start(); // Carrega a próxima pergunta
     } else {
         //alert('Errou! Tente novamente.');
+        
+        return start();
     }
 }
 
@@ -143,5 +146,5 @@ function classific(atividade,nivel){
     // Pega o texto do primeiro strong (primeira <p>)
     allStrongTags[0].textContent = conquista[nivel] // "Medalha de Principiante"
 
-    allStrongTags[1].textContent = 15 * atividade; // "0"
+    allStrongTags[1].textContent = 11 * atividade; // "0"
 }
